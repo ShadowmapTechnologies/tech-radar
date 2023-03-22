@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="description" content="Zalando Tech Radar: a tool to visualize technology choices, inspire and support Engineering teams at Zalando to pick the best technologies for new projects">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shadowmap Tech Radar</title>
+<link rel="shortcut icon" href="https://shadowmap.org/favicon/favicon.ico">
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="http://zalando.github.io/tech-radar/release/radar-0.7.js"></script>
+
+<link rel="stylesheet" href="radar.css">
+</head>
+
+<body>
+
+<svg id="radar"></svg>
+
+<script>
+radar_visualization({
+  svg_id: "radar",
+  width: 1450,
+  height: 1000,
+  colors: {
+    background: "#fff",
+    grid: '#dddde0',
+    inactive: "#ddd"
+  },
+  title: "Shadowmap Tech Radar",
+  date: "2023.03",
+  quadrants: [
+    { name: "Languages" },
+    { name: "Infrastructure" },
+    { name: "Engine" },
+    { name: "Datasources" },
+  ],
+  rings: [
+    { name: "ADOPT", color: "#5ba300" },
+    { name: "TRIAL", color: "#009eb0" },
+    { name: "ASSESS", color: "#c7ba00" },
+    { name: "HOLD", color: "#e09b96" }
+  ],
+  print_layout: true,
+  links_in_new_tabs: true,
+  // zoomed_quadrant: 1,
+  //ENTRIES
+  entries: [
+      {
+        "quadrant": 2,
+        "ring": 0,
+        "label": "Three.js",
+        "link": "https://threejs.org/",
+      },
+      {
+        "quadrant": 2,
+        "ring": 0,
+        "label": "WebGL",
+      },
+      {
+        "quadrant": 2,
+        "ring": 2,
+        "label": "3D Tiles",
+        "link": "https://github.com/CesiumGS/3d-tiles",
+        "moved": -1
+      },
+      {
+        "quadrant": 2,
+        "ring": 2,
+        "label": "Geo-Three",
+        "link": "https://github.com/tentone/geo-three",
+        "moved": -1
+      },
+      {
+        "quadrant": 3,
+        "ring": 0,
+        "label": "Stadia Maps",
+        "link": "https://stadiamaps.com/",
+      },
+      {
+        "quadrant": 3,
+        "ring": 0,
+        "label": "Mapzen - Terrain Tiles",
+        "link": "https://registry.opendata.aws/terrain-tiles/",
+      },
+      {
+        "quadrant": 0,
+        "ring": 0,
+        "label": "Javascript/Typescript",
+      },
+      {
+        "quadrant": 0,
+        "ring": 2,
+        "label": "Rust",
+      },
+      {
+        "quadrant": 1,
+        "ring": 0,
+        "label": "MongoDB",
+      },
+      {
+        "quadrant": 1,
+        "ring": 0,
+        "label": "Netlify",
+      },
+      {
+        "quadrant": 1,
+        "ring": 0,
+        "label": "Cloudflare",
+      },
+      {
+        "quadrant": 1,
+        "ring": 0,
+        "label": "AWS S3",
+      },
+      {
+        "quadrant": 1,
+        "ring": 0,
+        "label": "Azure Blob Storage",
+      }
+    ]
+  //ENTRIES
+});
+</script>
+
+<p>
+The Shadowmap Tech Radar is an adaptation of <a href="https://opensource.zalando.com/tech-radar/">Zalando's tech radar</a>. The semantics of the radar are borrowed from there.
+</p>
+
+</body>
+</html>
